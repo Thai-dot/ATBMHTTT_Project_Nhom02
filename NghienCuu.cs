@@ -89,5 +89,14 @@ namespace Test2
 			nv.ShowDialog();
 			this.Close();
 		}
-	}
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+			this.Hide();
+			Login_Form lg = new Login_Form();
+			lg.ShowDialog();
+			this.Close();
+			
+		}
+    }
 }

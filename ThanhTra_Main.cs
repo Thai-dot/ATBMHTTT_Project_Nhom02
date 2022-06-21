@@ -83,5 +83,21 @@ namespace Test2
 
             conn.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NhanVien_Main nv = new NhanVien_Main();
+            this.Hide();
+            nv.ShowDialog();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login_Form lg = new Login_Form();
+            lg.ShowDialog();
+            this.Close();
+        }
     }
 }

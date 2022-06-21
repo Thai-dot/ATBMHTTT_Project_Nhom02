@@ -81,7 +81,8 @@ namespace Test2
                 }
                 if (username_login_textBox.Text.Substring(0, 2) == "NC")
                 {
-                    MessageBox.Show("Dang nhap nc");
+                    NghienCuu nc = new NghienCuu();
+                    nc.ShowDialog();
                 }
                 if (username_login_textBox.Text.Substring(0, 2) == "BN")
                 {

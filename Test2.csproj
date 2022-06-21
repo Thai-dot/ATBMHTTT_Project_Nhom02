@@ -105,6 +105,12 @@
     <Compile Include="Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghienCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghienCuu.Designer.cs">
+      <DependentUpon>NghienCuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghienCuu.resx">
+      <DependentUpon>NghienCuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien_Main.resx">
       <DependentUpon>NhanVien_Main.cs</DependentUpon>
