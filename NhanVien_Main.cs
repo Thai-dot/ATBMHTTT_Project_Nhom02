@@ -32,6 +32,8 @@ namespace Test2
             adapter.Fill(data);
             dgv_ThongTinNV.DataSource = data;
 
+            date_NgaySinh_NhanVien.Text =  dgv_ThongTinNV.Rows[0].Cells[3].Value.ToString();
+
             conn.Close();
         }
             
@@ -64,13 +66,76 @@ namespace Test2
         {
             conn.Open();
             string sql = "";
-            sql = @"Update SUPERADMIN.NHANVIEN set HO_TEN = :Hoten where ma_nv = '" + Globals.username + "'";
-            command = new OracleCommand(sql, conn);
-            command.Parameters.Add("Hoten",OracleDbType.NVarchar2, 40).Value = txtHoTen.Text;
+            if(txtHoTen.Text!="")
+            {
+                sql = @"Update SUPERADMIN.NHANVIEN set HO_TEN = :Hoten where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("Hoten", OracleDbType.NVarchar2, 40).Value = txtHoTen.Text;
 
-            command.ExecuteNonQuery();
-            dgv_ThongTinNV.Update();
-            dgv_ThongTinNV.Refresh();
+                command.ExecuteNonQuery();
+                
+            }   
+            if(cbb_Phai.Text.Length > 0)
+            {
+                int phai_num = -1;
+                if (cbb_Phai.Text == "Nam")
+                {
+                    phai_num = 0;
+                }
+                else 
+                {
+                    phai_num = 1;
+                }
+                sql = @"Update SUPERADMIN.NHANVIEN set PHAI = :Phai where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("Phai", OracleDbType.Char, 1).Value = phai_num.ToString();
+
+                command.ExecuteNonQuery();
+            }
+            if(date_NgaySinh_NhanVien.Text.Length > 0)
+            {
+                sql = @"Update SUPERADMIN.NHANVIEN set NGAY_SINH = :NgaySinh where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("NgaySinh", OracleDbType.Date).Value = date_NgaySinh_NhanVien.Text;
+
+                command.ExecuteNonQuery();
+            }
+            if(txtCMND.Text.Length > 0)
+            {
+                if(txtCMND.Text.Length != 12)
+                {
+                    MessageBox.Show("CMND only 12 numbers length", "UPDATE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                sql = @"Update SUPERADMIN.NHANVIEN set CMND = :cmnd where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("cmnd", OracleDbType.Varchar2, 12).Value = txtCMND.Text;
+
+                command.ExecuteNonQuery();
+            }
+            if(txtQueQuan.Text.Length > 0)
+            {
+                sql = @"Update SUPERADMIN.NHANVIEN set QUE_QUAN = :quequan where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("quequan", OracleDbType.NVarchar2, 20).Value = txtQueQuan.Text;
+
+                command.ExecuteNonQuery();
+            }
+            if (txtSDT.Text.Length > 0)
+            {
+                if (txtSDT.Text.Length != 10)
+                {
+                    MessageBox.Show("SĐT only 10 numbers length", "UPDATE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                sql = @"Update SUPERADMIN.NHANVIEN set SO_DT = :sdt where ma_nv = '" + Globals.username + "'";
+                command = new OracleCommand(sql, conn);
+                command.Parameters.Add("sdt", OracleDbType.Varchar2, 10).Value = txtSDT.Text;
+
+                command.ExecuteNonQuery();
+            }
+
+
             Load_Data();
             conn.Close();
 

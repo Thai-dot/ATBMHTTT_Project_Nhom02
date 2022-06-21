@@ -39,12 +39,12 @@
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.txtPhai = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.date_NgaySinh_NhanVien = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.BTN_cAPnHAT_THONGTIN = new System.Windows.Forms.Button();
+            this.cbb_Phai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongTinNV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,13 +143,6 @@
             this.txtCMND.Size = new System.Drawing.Size(201, 22);
             this.txtCMND.TabIndex = 12;
             // 
-            // txtPhai
-            // 
-            this.txtPhai.Location = new System.Drawing.Point(134, 361);
-            this.txtPhai.Name = "txtPhai";
-            this.txtPhai.Size = new System.Drawing.Size(201, 22);
-            this.txtPhai.TabIndex = 13;
-            // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(750, 358);
@@ -166,13 +159,13 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Thông tin cá nhân:";
             // 
-            // dateTimePicker1
+            // date_NgaySinh_NhanVien
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(436, 273);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            this.date_NgaySinh_NhanVien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.date_NgaySinh_NhanVien.Location = new System.Drawing.Point(436, 273);
+            this.date_NgaySinh_NhanVien.Name = "date_NgaySinh_NhanVien";
+            this.date_NgaySinh_NhanVien.Size = new System.Drawing.Size(200, 22);
+            this.date_NgaySinh_NhanVien.TabIndex = 17;
             // 
             // button2
             // 
@@ -190,21 +183,32 @@
             this.BTN_cAPnHAT_THONGTIN.Name = "BTN_cAPnHAT_THONGTIN";
             this.BTN_cAPnHAT_THONGTIN.Size = new System.Drawing.Size(132, 55);
             this.BTN_cAPnHAT_THONGTIN.TabIndex = 19;
-            this.BTN_cAPnHAT_THONGTIN.Text = "CL";
+            this.BTN_cAPnHAT_THONGTIN.Text = "Cập nhật";
             this.BTN_cAPnHAT_THONGTIN.UseVisualStyleBackColor = true;
             this.BTN_cAPnHAT_THONGTIN.Click += new System.EventHandler(this.BTN_cAPnHAT_THONGTIN_Click);
+            // 
+            // cbb_Phai
+            // 
+            this.cbb_Phai.FormattingEnabled = true;
+            this.cbb_Phai.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbb_Phai.Location = new System.Drawing.Point(134, 357);
+            this.cbb_Phai.Name = "cbb_Phai";
+            this.cbb_Phai.Size = new System.Drawing.Size(201, 24);
+            this.cbb_Phai.TabIndex = 20;
             // 
             // NhanVien_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 556);
+            this.Controls.Add(this.cbb_Phai);
             this.Controls.Add(this.BTN_cAPnHAT_THONGTIN);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.date_NgaySinh_NhanVien);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtSDT);
-            this.Controls.Add(this.txtPhai);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.txtQueQuan);
             this.Controls.Add(this.txtHoTen);
@@ -238,11 +242,11 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.TextBox txtCMND;
-        private System.Windows.Forms.TextBox txtPhai;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker date_NgaySinh_NhanVien;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button BTN_cAPnHAT_THONGTIN;
+        private System.Windows.Forms.ComboBox cbb_Phai;
     }
 }
