@@ -98,3 +98,4 @@ D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.ADMIN_MAIN.resources
 D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.BacSy_Main.resources
 D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.NhanVien_Main.resources
 D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.NghienCuu.resources
+D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.BenhNhan_Main.resources

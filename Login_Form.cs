@@ -86,7 +86,8 @@ namespace Test2
                 }
                 if (username_login_textBox.Text.Substring(0, 2) == "BN")
                 {
-                    MessageBox.Show("Dang nhap bn");
+                    BenhNhan_Main bn = new BenhNhan_Main();
+                    bn.ShowDialog();
                 }
 
 
