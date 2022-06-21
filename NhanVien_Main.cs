@@ -55,8 +55,16 @@ namespace Test2
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            BacSy_Main bs = new BacSy_Main();
-            bs.ShowDialog();
+            if (Globals.username.Substring(0, 2) == "BS")
+            {
+                BacSy_Main bs = new BacSy_Main();
+                bs.ShowDialog();
+            }
+            if(Globals.username.Substring(0, 2) == "NC")
+            {
+                
+            }
+            
             this.Close();
         }
 
