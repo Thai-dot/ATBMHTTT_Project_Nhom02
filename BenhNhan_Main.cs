@@ -102,5 +102,13 @@ namespace Test2
             lg.ShowDialog();
             
         }
+
+        private void button_TB_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ALL_THONGBAO a = new ALL_THONGBAO();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

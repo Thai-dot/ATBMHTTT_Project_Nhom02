@@ -81,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin_acc.cs" />
+    <Compile Include="ALL_THONGBAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ALL_THONGBAO.Designer.cs">
+      <DependentUpon>ALL_THONGBAO.cs</DependentUpon>
+    </Compile>
     <Compile Include="BacSy_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <Compile Include="ThanhTra_Main.Designer.cs">
       <DependentUpon>ThanhTra_Main.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ALL_THONGBAO.resx">
+      <DependentUpon>ALL_THONGBAO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BacSy_Main.resx">
       <DependentUpon>BacSy_Main.cs</DependentUpon>
     </EmbeddedResource>
