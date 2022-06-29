@@ -35,5 +35,32 @@ namespace Test2
 
             conn.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (Globals.username.Substring(0, 2) == "BS")
+            {
+                BacSy_Main bs = new BacSy_Main();
+                bs.ShowDialog();
+            }
+            if (Globals.username.Substring(0, 2) == "NC")
+            {
+                NghienCuu nc = new NghienCuu();
+                nc.ShowDialog();
+            }
+            if (Globals.username.Substring(0, 4) == "CSYT")
+            {
+                CoSoYTe_Main csyt = new CoSoYTe_Main();
+                csyt.ShowDialog();
+            }
+            if (Globals.username.Substring(0, 2) == "TT")
+            {
+                ThanhTra_Main tt = new ThanhTra_Main();
+                tt.ShowDialog();
+            }
+
+            this.Close();
+        }
     }
 }

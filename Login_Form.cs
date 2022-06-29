@@ -74,7 +74,7 @@ namespace Test2
                     ThanhTra_Main tt = new ThanhTra_Main();
                     tt.ShowDialog();
                 }
-                if (username_login_textBox.Text.Substring(0, 4) == "CSYT")
+                if (username_login_textBox.Text.Substring(0, 4) == "CSYT" || username_login_textBox.Text.Substring(0, 2) == "CS")
                 {
                     CoSoYTe_Main csyt = new CoSoYTe_Main();
                     csyt.ShowDialog();

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
-using System.Configuration;
+
 
 namespace Test2
 {
@@ -34,6 +34,9 @@ namespace Test2
             adapter.Fill(data);
             dataGridView_HSBA.DataSource = data;
 
+            conn.Close();
+
+            conn.Open();
             string sql1 = "SELECT * FROM SUPERADMIN.HSBA_DV";
             command = new OracleCommand(sql1, conn);
 
@@ -41,7 +44,9 @@ namespace Test2
             adapter = new OracleDataAdapter(command);
             adapter.Fill(data2);
             dataGridView_HSBADV.DataSource = data2;
+            conn.Close();
 
+            conn.Open();
             string sql2 = "SELECT * FROM SUPERADMIN.NHANVIEN";
             command = new OracleCommand(sql2, conn);
 
@@ -49,7 +54,9 @@ namespace Test2
             adapter = new OracleDataAdapter(command);
             adapter.Fill(data3);
             dataGridView_NV.DataSource = data3;
+            conn.Close();
 
+            conn.Open();
             string sql3 = "SELECT * FROM SUPERADMIN.KHOA";
             command = new OracleCommand(sql3, conn);
 
@@ -57,7 +64,9 @@ namespace Test2
             adapter = new OracleDataAdapter(command);
             adapter.Fill(data4);
             dataGridView_Khoa.DataSource = data4;
+            conn.Close();
 
+            conn.Open();
             string sql4 = "SELECT * FROM SUPERADMIN.BENH_NHAN";
             command = new OracleCommand(sql4, conn);
 
@@ -65,7 +74,9 @@ namespace Test2
             adapter = new OracleDataAdapter(command);
             adapter.Fill(data5);
             dataGridView_BenhNhan.DataSource = data5;
+            conn.Close();
 
+            conn.Open();
             string sql5 = "SELECT * FROM SUPERADMIN.CSYT";
             command = new OracleCommand(sql5, conn);
 
@@ -86,10 +97,12 @@ namespace Test2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            NhanVien_Main nv = new NhanVien_Main();
             this.Hide();
+            NhanVien_Main nv = new NhanVien_Main();
+            
             nv.ShowDialog();
             this.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -106,6 +119,7 @@ namespace Test2
             ALL_THONGBAO a = new ALL_THONGBAO();
             a.ShowDialog();
             this.Close();
+            
         }
     }
 }

@@ -137,3 +137,4 @@ C:\Users\Dell\Desktop\ATBMHTTT_Project_Nhom02\obj\Debug\Test2.csproj.CoreCompile
 C:\Users\Dell\Desktop\ATBMHTTT_Project_Nhom02\obj\Debug\Test2.csproj.CopyComplete
 C:\Users\Dell\Desktop\ATBMHTTT_Project_Nhom02\obj\Debug\Test2.exe
 C:\Users\Dell\Desktop\ATBMHTTT_Project_Nhom02\obj\Debug\Test2.pdb
+D:\Oracle\OracleProject\PhanHe2\obj\Debug\Test2.ALL_THONGBAO.resources

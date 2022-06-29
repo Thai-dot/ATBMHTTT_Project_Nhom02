@@ -27,7 +27,7 @@ namespace Test2
         {
             conn.Open();
 
-            string sql1 = "select * from SUPERADMIN.HSBA";
+            string sql1 = "select MA_HSBA,MA_BN,NGAY,SUPERADMIN.F_DECRYPT(CHAN_DOAN) AS CHANDOAN,MA_BS,MA_KHOA,MA_CSYT,KET_LUAN  from SUPERADMIN.HSBA";
             string sql2 = "select * from SUPERADMIN.HSBA_DV";
             command1 = new OracleCommand(sql1, conn);
             command2 = new OracleCommand(sql2, conn);

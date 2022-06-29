@@ -65,7 +65,7 @@ namespace Test2
                 NghienCuu nc = new NghienCuu();
                 nc.ShowDialog();    
             }
-            if (Globals.username.Substring(0, 4) == "CSYT")
+            if (Globals.username.Substring(0, 4) == "CSYT"|| Globals.username.Substring(0, 2) == "CS")
             {
                 CoSoYTe_Main csyt = new CoSoYTe_Main();
                 csyt.ShowDialog();
@@ -126,6 +126,7 @@ namespace Test2
                 if(txtCMND.Text.Length != 12)
                 {
                     MessageBox.Show("CMND only 12 numbers length", "UPDATE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conn.Close();
                     return;
                 }
                 sql = @"Update SUPERADMIN.NHANVIEN set CMND = :cmnd where ma_nv = '" + Globals.username + "'";
@@ -147,6 +148,7 @@ namespace Test2
                 if (txtSDT.Text.Length != 10)
                 {
                     MessageBox.Show("SĐT only 10 numbers length", "UPDATE FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     return;
                 }
                 sql = @"Update SUPERADMIN.NHANVIEN set SO_DT = :sdt where ma_nv = '" + Globals.username + "'";

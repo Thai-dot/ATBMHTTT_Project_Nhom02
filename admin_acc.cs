@@ -11,7 +11,7 @@ namespace Test2
         public static String Data_String = "";
         public static String host = "THAIDESKTOP";
         public static String port = "1521";
-        public static String SID = "ORCL";
+        public static String SID = "PLB_ORCL";
         public static String username = "";
     }
 }

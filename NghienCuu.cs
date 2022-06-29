@@ -29,7 +29,7 @@ namespace Test2
 		{
 			conn.Open();
 
-			string orclsql1 = " select * from SUPERADMIN.HSBA";
+			string orclsql1 = "select MA_HSBA,MA_BN,NGAY,SUPERADMIN.F_DECRYPT(CHAN_DOAN) AS CHANDOAN,MA_BS,MA_KHOA,MA_CSYT,KET_LUAN from SUPERADMIN.HSBA";
 			string orclsql2 = "select MA_HSBA from SUPERADMIN.HSBA";
 			command1 = new OracleCommand(orclsql1, conn);
 			command2 = new OracleCommand(orclsql2, conn);
