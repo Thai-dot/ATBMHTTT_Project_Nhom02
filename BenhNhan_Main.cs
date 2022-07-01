@@ -105,10 +105,10 @@ namespace Test2
 
         private void button_TB_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             ALL_THONGBAO a = new ALL_THONGBAO();
             a.ShowDialog();
-            this.Close();
+            //this.Close();
         }
     }
 }

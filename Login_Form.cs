@@ -34,6 +34,7 @@ namespace Test2
 
             OracleConnection connect = new OracleConnection(strConn);
 
+            
             if (!username_login_textBox.Text.All(Char.IsLetterOrDigit) || !pw_login_textBox.Text.All(Char.IsLetterOrDigit)) //prevent SQL injection 
             {
                 MessageBox.Show("VALUE ONLY LETTERS AND NUMBER!", "LOGIN FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -57,7 +58,7 @@ namespace Test2
                 
                 this.Hide();
                 Globals.Data_String = strConn;
-                Globals.username = username_login_textBox.Text;
+                //Globals.username = username_login_textBox.Text.ToString();
 
                 if (username_login_textBox.Text == "SUPERADMIN")
                 {
@@ -79,7 +80,12 @@ namespace Test2
                     CoSoYTe_Main csyt = new CoSoYTe_Main();
                     csyt.ShowDialog();
                 }
-                if (username_login_textBox.Text.Substring(0, 2) == "NC")
+                //if (username_login_textBox.Text.Substring(0, 2) == "NC")
+                //{
+                //    NghienCuu nc = new NghienCuu();
+                //    nc.ShowDialog();
+                //}
+                if (username_login_textBox.Text.Contains("NC") == true)
                 {
                     NghienCuu nc = new NghienCuu();
                     nc.ShowDialog();
@@ -99,6 +105,7 @@ namespace Test2
             {
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("LOGIN FAIL!!!", "USERNAME OR PASSWORD INCORRECT!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //this.Close();
             }
             finally
             {

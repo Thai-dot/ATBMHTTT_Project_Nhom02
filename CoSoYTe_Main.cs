@@ -167,9 +167,9 @@ namespace Test2
         private void button1_Click(object sender, EventArgs e)
         {
             NhanVien_Main nv = new NhanVien_Main();
-            this.Hide();
+            //this.Hide();
             nv.ShowDialog();
-            this.Close();
+            //this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -183,10 +183,10 @@ namespace Test2
 
         private void button_TB_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             ALL_THONGBAO a = new ALL_THONGBAO();
             a.ShowDialog();
-            this.Close();
+            //this.Close();
         }
     }
 }
